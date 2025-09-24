@@ -1,0 +1,45 @@
+:root{
+  --bg:#FFFFFF; --ink:#333333; --muted:#6B7280;
+  --brand:#0E63B6; --brand-2:#1C89E8; --brand-dark:#0D3A66;
+  --accent:#19B9FF; --border:#E5E7EB; --card:#FFFFFF;
+}
+*{box-sizing:border-box} html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui}
+img{max-width:100%;display:block}
+a{color:var(--brand);text-decoration:none}
+.container{width:960px;max-width:96vw;margin:0 auto;padding:0 12px}
+.icon{width:18px;height:18px;vertical-align:-3px;margin-right:6px;display:inline-block}
+
+/* Topo */
+.topbar{position:sticky;top:0;background:rgba(255,255,255,.9);border-bottom:1px solid var(--border);z-index:10}
+.topbar .container{display:flex;align-items:center;justify-content:space-between;padding:12px 8px}
+.brand{display:flex;gap:12px;align-items:center}
+.logo{width:44px;height:44px;border-radius:8px}
+.brand-text{display:flex;flex-direction:column;font-size:14px}
+.brand-text strong{font-size:17px;color:var(--brand-dark)}
+.nav a{margin-left:16px;color:var(--brand-dark)}
+.nav a:hover{color:var(--brand)}
+
+/* Hero */
+.hero{padding:72px 0 48px;background:url('hero.png') center/cover no-repeat;min-height:78vh;color:#fff;position:relative}
+.hero:before{content:"";position:absolute;inset:0;background:rgba(0,0,0,.35)}
+.hero .container{position:relative;z-index:1}
+.hero-copy{max-width:680px;background:rgba(0,0,0,.4);border-radius:16px;padding:20px}
+.hero-copy h1{font-size:40px;line-height:1.12;margin:0 0 12px;color:#fff}
+.hero-copy h1 em{font-style:italic;color:#cfe7ff}
+.hero-copy p{color:#f1f5ff;margin:0 0 16px}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:12px 18px;border-radius:14px;border:1px solid var(--border);background:#fff;cursor:pointer}
+.btn:hover{transform:translateY(-1px)}
+.btn.primary{background:linear-gradient(90deg,var(--brand),var(--brand-2));color:#fff;border-color:transparent;font-weight:700}
+.btn.outline{background:rgba(255,255,255,.1);border-color:#bfe6ff;color:#fff}
+.btn.small{padding:8px 12px;border-radius:10px;font-size:14px}
+
+/* Cards */
+.cards{padding:36px 0;border-top:1px solid var(--border)}
+.cards h2{margin:0 0 16px;color:var(--brand-dark)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:860px){.grid{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--border);border-radius:16px;overflow:hidden}
+.card-body{padding:12px}
+.card h3{margin:10px 0 6px;color:var(--brand-dark)}
+
